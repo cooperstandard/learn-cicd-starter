@@ -1,6 +1,6 @@
 package auth_test
 
-import(
+import (
 	"github.com/bootdotdev/learn-cicd-starter/internal/auth"
 	"net/http"
 	"testing"
@@ -19,7 +19,7 @@ func TestGetAPIKey(t *testing.T) {
 			headers: http.Header{},
 			wantErr: true,
 		}, {
-			name:    "function returns authorization header if present",
+			name: "function returns authorization header if present",
 			headers: http.Header{
 				"Authorization": {"ApiKey testValue"},
 			},
@@ -46,4 +46,3 @@ func TestGetAPIKey(t *testing.T) {
 		})
 	}
 }
-
